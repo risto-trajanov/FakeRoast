@@ -259,7 +259,8 @@ class FakeRoastEmbedding(nn.Module):
                  scale_grad_by_freq=False,
                  sparse=False,
                  req_scale = None,
-                 mapper_args = None):
+                 mapper_args = None,
+                 matrix_mode=None):
         super(FakeRoastEmbedding, self).__init__()
         W_shape = (num_embeddings, embedding_dim)
         if is_global == False:
